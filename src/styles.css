@@ -1,3 +1,5 @@
+@import './styles/shared.css';
+
 #toast-container {
   top: 30px;
   right: 40px;

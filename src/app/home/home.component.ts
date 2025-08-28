@@ -1,38 +1,31 @@
 
 import { Component } from '@angular/core';
-import { Router, RouterModule, RouterOutlet } from '@angular/router';
+import { RouterModule, RouterOutlet } from '@angular/router';
+import { HeroComponent } from '../components/hero/hero.component';
+import { StatisticsComponent } from '../components/statistics/statistics.component';
+import { ServicesComponent } from '../components/services/services.component';
+import { DestinationsComponent } from '../components/destinations/destinations.component';
+import { WhyChooseUsComponent } from '../components/why-choose-us/why-choose-us.component';
+import { TestimonialsComponent } from '../components/testimonials/testimonials.component';
+import { CtaComponent } from '../components/cta/cta.component';
 
 @Component({
     selector: 'app-home',
-    imports: [RouterOutlet, RouterModule],
+    imports: [
+        RouterOutlet, 
+        RouterModule,
+        HeroComponent,
+        StatisticsComponent,
+        ServicesComponent,
+        DestinationsComponent,
+        WhyChooseUsComponent,
+        TestimonialsComponent,
+        CtaComponent
+    ],
     templateUrl: './home.component.html',
     styleUrl: './home.component.css'
 })
 export class HomeComponent {
-
-    constructor(private router: Router) {}
-
-    navigateToService(serviceRoute: string) {
-        this.router.navigate(['/service', serviceRoute]);
-    }
-
-    scrollCards(section: string, direction: 'left' | 'right') {
-        const cardsContainer = document.getElementById(`${section}-cards`);
-        if (cardsContainer) {
-            const scrollAmount = 350; // Adjust based on card width + gap
-            const currentScroll = cardsContainer.scrollLeft;
-            
-            if (direction === 'left') {
-                cardsContainer.scrollTo({
-                    left: currentScroll - scrollAmount,
-                    behavior: 'smooth'
-                });
-            } else {
-                cardsContainer.scrollTo({
-                    left: currentScroll + scrollAmount,
-                    behavior: 'smooth'
-                });
-            }
-        }
-    }
+    // Home component now uses child components
+    // All functionality has been moved to respective components
 }

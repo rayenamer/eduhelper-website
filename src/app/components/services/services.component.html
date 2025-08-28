@@ -1,0 +1,127 @@
+<!-- Services Section -->
+<section class="services">
+    <div class="container">
+        <div class="section-header">
+            <h2>Our Services</h2>
+            <p>Comprehensive support for your international education journey</p>
+        </div>
+
+        <div class="scrollable-container">
+            <div class="scrollable-cards" id="services-cards">
+                <div class="scroll-card">
+                    <div class="card-image">
+                        <img src="https://ik.imagekit.io/p51pyfdvv/UniApplication.jfif?updatedAt=1756127787156"
+                            alt="University Application">
+                    </div>
+                    <div class="card-content">
+                        <h3>University Application</h3>
+                        <p>Securing your spot at a prestigious international university is a pivotal moment, and we're
+                            here to make it accessible and hassle-free.</p>
+                        <button class="know-more-btn" (click)="navigateToService('university-application')">Know More Details</button>
+                    </div>
+                </div>
+
+                <div class="scroll-card">
+                    <div class="card-image">
+                        <img src="https://ik.imagekit.io/p51pyfdvv/Proc%20Visa.jpg?updatedAt=1756127780973"
+                            alt="Visa Procedure">
+                    </div>
+                    <div class="card-content">
+                        <h3>Visa Procedure</h3>
+                        <p>Our agency is dedicated to simplifying the visa process, ensuring your focus remains on your
+                            academic journey.</p>
+                        <button class="know-more-btn" (click)="navigateToService('visa-procedure')">Know More Details</button>
+                    </div>
+                </div>
+
+                <div class="scroll-card">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+                            alt="Housing Search">
+                    </div>
+                    <div class="card-content">
+                        <h3>Housing Search</h3>
+                        <p>Your Home Away From Home: Seamless Accommodation Solutions Abroad.</p>
+                        <button class="know-more-btn" (click)="navigateToService('housing-search')">Know More Details</button>
+                    </div>
+                </div>
+
+                <div class="scroll-card">
+                    <div class="card-image">
+                        <img src="https://ik.imagekit.io/p51pyfdvv/Travel-insuranc.jpg?updatedAt=1756127781079"
+                            alt="Travel Insurance">
+                    </div>
+                    <div class="card-content">
+                        <h3>Travel Insurance</h3>
+                        <p>Empowering Your Journey: Comprehensive Travel Insurance for Peace of Mind Abroad.</p>
+                        <button class="know-more-btn" (click)="navigateToService('travel-insurance')">Know More Details</button>
+                    </div>
+                </div>
+
+                <div class="scroll-card">
+                    <div class="card-image">
+                        <img src="https://ik.imagekit.io/p51pyfdvv/scholarship.webp?updatedAt=1756127781033"
+                            alt="Scholarship Guidance">
+                    </div>
+                    <div class="card-content">
+                        <h3>Scholarship Guidance</h3>
+                        <p>Unlocking Scholarly Opportunities: Navigating Pathways to Financial Aid Abroad.</p>
+                        <button class="know-more-btn" (click)="navigateToService('scholarship-guidance')">Know More Details</button>
+                    </div>
+                </div>
+
+                <div class="scroll-card">
+                    <div class="card-image">
+                        <img src="https://ik.imagekit.io/p51pyfdvv/interview.jpg?updatedAt=1756127779928"
+                            alt="Interview Preparation">
+                    </div>
+                    <div class="card-content">
+                        <h3>Interview Preparation</h3>
+                        <p>From crafting impactful CVs and compelling cover letters to honing your interview skills.</p>
+                        <button class="know-more-btn" (click)="navigateToService('interview-preparation')">Know More Details</button>
+                    </div>
+                </div>
+                
+                <div class="scroll-card">
+                    <div class="card-image">
+                        <img src="https://ik.imagekit.io/p51pyfdvv/Traduction.jpg?updatedAt=1756136996761"
+                            alt="Official Translation">
+                    </div>
+                    <div class="card-content">
+                        <h3>Official Translation</h3>
+                        <p>Official translations from certified institutions.</p>
+                        <button class="know-more-btn" (click)="navigateToService('official-translation')">Know More Details</button>
+                    </div>
+                </div>
+                
+                <div class="scroll-card">
+                    <div class="card-image">
+                        <img src="https://ik.imagekit.io/p51pyfdvv/reservation.jpg?updatedAt=1756137482333"
+                            alt="Hotel and Ticket Reservation">
+                    </div>
+                    <div class="card-content">
+                        <h3>Hotel and Ticket Reservation</h3>
+                        <p>Booking the best options for you.</p>
+                        <button class="know-more-btn" (click)="navigateToService('hotel-ticket-reservation')">Know More Details</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="arrows-container">
+                <button class="scroll-arrow scroll-left" (click)="scrollCards('services', 'left')">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </button>
+
+                <button class="scroll-arrow scroll-right" (click)="scrollCards('services', 'right')">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
