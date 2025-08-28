@@ -5,7 +5,7 @@
   right: 24px;
   width: 70px;
   height: 70px;
-  background: linear-gradient(135deg, #c31e33 0%, #ef4444 100%);
+  background: linear-gradient(135deg, #c31e33 0%, #c31e33 100%);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -56,7 +56,7 @@
 
 /* Chat Header */
 .chat-header {
-  background: linear-gradient(135deg, #c31e33 0%, #ef4444 100%);
+  background: linear-gradient(135deg, #c31e33 0%, #c31e33 100%);
   color: white;
   padding: 16px 20px;
   display: flex;
@@ -157,7 +157,7 @@
 }
 
 .message.user .message-content {
-  background: linear-gradient(135deg, #c31e33 0%, #ef4444 100%);
+  background: linear-gradient(135deg, #c31e33 0%, #c31e33 100%);
   color: white;
   border-radius: 16px 16px 4px 16px;
 }
@@ -216,7 +216,7 @@
 }
 
 .show-questions-btn {
-  background: linear-gradient(135deg, #c31e33 0%, #ef4444 100%);
+  background: linear-gradient(135deg, #c31e33 0%, #c31e33 100%);
   color: white;
   border: none;
   border-radius: 20px;

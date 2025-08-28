@@ -17,7 +17,7 @@
 .blog-header h1 {
   font-size: 3rem;
   font-weight: 700;
-  background: linear-gradient(135deg, #c31e33 0%, #ef4444 100%);
+  background: linear-gradient(135deg, #c31e33 0%, #c31e33 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -89,7 +89,7 @@
 }
 
 .post-category {
-  background: linear-gradient(135deg, #c31e33 0%, #ef4444 100%);
+  background: linear-gradient(135deg, #c31e33 0%, #c31e33 100%);
   color: white;
   padding: 4px 12px;
   border-radius: 20px;

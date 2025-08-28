@@ -58,7 +58,7 @@ body {
 
 /* Common hero styles */
 .hero {
-    background: linear-gradient(135deg, #c31e33 0%, #ef4444 100%);
+    background: linear-gradient(135deg, #c31e33 0%, #c31e33 100%);
     min-height: 80vh;
     display: flex;
     align-items: center;
