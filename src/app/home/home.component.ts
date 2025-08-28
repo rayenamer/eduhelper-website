@@ -1,6 +1,6 @@
 
 import { Component } from '@angular/core';
-import { RouterModule, RouterOutlet } from '@angular/router';
+import { RouterModule, RouterOutlet, Router } from '@angular/router';
 import { HeroComponent } from '../components/hero/hero.component';
 import { StatisticsComponent } from '../components/statistics/statistics.component';
 import { ServicesComponent } from '../components/services/services.component';
@@ -28,4 +28,22 @@ import { CtaComponent } from '../components/cta/cta.component';
 export class HomeComponent {
     // Home component now uses child components
     // All functionality has been moved to respective components
+
+    constructor(private router: Router) {}
+
+    navigateToService(serviceType: string) {
+        this.router.navigate(['/services-detail', serviceType]);
+    }
+
+    scrollCards(section: string, direction: string) {
+        const container = document.getElementById(`${section}-cards`);
+        if (container) {
+            const scrollAmount = 300;
+            if (direction === 'left') {
+                container.scrollLeft -= scrollAmount;
+            } else {
+                container.scrollLeft += scrollAmount;
+            }
+        }
+    }
 }
