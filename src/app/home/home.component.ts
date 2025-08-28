@@ -1,26 +1,11 @@
 
 import { Component } from '@angular/core';
-import { RouterModule, RouterOutlet, Router } from '@angular/router';
-import { HeroComponent } from '../components/hero/hero.component';
-import { StatisticsComponent } from '../components/statistics/statistics.component';
-import { ServicesComponent } from '../components/services/services.component';
-import { DestinationsComponent } from '../components/destinations/destinations.component';
-import { WhyChooseUsComponent } from '../components/why-choose-us/why-choose-us.component';
-import { TestimonialsComponent } from '../components/testimonials/testimonials.component';
-import { CtaComponent } from '../components/cta/cta.component';
+import { RouterModule, Router } from '@angular/router';
 
 @Component({
     selector: 'app-home',
     imports: [
-        RouterOutlet, 
-        RouterModule,
-        HeroComponent,
-        StatisticsComponent,
-        ServicesComponent,
-        DestinationsComponent,
-        WhyChooseUsComponent,
-        TestimonialsComponent,
-        CtaComponent
+        RouterModule
     ],
     templateUrl: './home.component.html',
     styleUrl: './home.component.css'
