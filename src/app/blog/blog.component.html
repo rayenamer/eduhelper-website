@@ -1,0 +1,27 @@
+<div class="blog-container">
+  <div class="blog-header">
+    <h1>EduHelper Blog</h1>
+    <p>Insights, tips, and guidance for your educational journey</p>
+  </div>
+
+  <div class="blog-posts">
+    <article *ngFor="let post of blogPosts" class="blog-post">
+      <div class="post-header">
+        <h2 class="post-title">{{ post.title }}</h2>
+        <div class="post-meta">
+          <span class="post-date">{{ formatDate(post.date) }}</span>
+          <span class="post-author">by {{ post.author }}</span>
+          <span class="post-category">{{ post.category }}</span>
+        </div>
+      </div>
+
+      <div class="post-image" *ngIf="post.image">
+        <img [src]="post.image" [alt]="post.title" loading="lazy">
+      </div>
+
+      <div class="post-content">
+        <div class="content-text" [innerHTML]="post.content | slice:0:post.content.length"></div>
+      </div>
+    </article>
+  </div>
+</div>

@@ -1,0 +1,81 @@
+<!-- Floating Chat Button -->
+<div class="chat-button" [class.open]="isOpen" (click)="toggleChat()">
+  <svg *ngIf="!isOpen" width="32" height="32" viewBox="0 0 24 24" fill="none">
+    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" stroke="currentColor" stroke-width="2" fill="none"/>
+  </svg>
+  <svg *ngIf="isOpen" width="32" height="32" viewBox="0 0 24 24" fill="none">
+    <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+  </svg>
+</div>
+
+<!-- Chat Window -->
+<div class="chat-window" [class.open]="isOpen">
+  <!-- Chat Header -->
+  <div class="chat-header">
+    <div class="chat-title">
+      <div class="ai-avatar">
+        <img src="https://ik.imagekit.io/p51pyfdvv/Design%20sans%20titre%20(5).png?updatedAt=1756125953598" alt="EduHelper Logo" width="20" height="20">
+      </div>
+      <div>
+        <h3>EduHelper</h3>
+        <span class="status">Online</span>
+      </div>
+    </div>
+    <button class="clear-btn" (click)="clearChat()" title="Clear Chat">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+        <path d="M3 6h18M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2m3 0v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6h14zM10 11v6M14 11v6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+    </button>
+  </div>
+
+  <!-- Chat Messages -->
+  <div class="chat-messages">
+    <div *ngFor="let message of messages" class="message" [class.user]="message.isUser" [class.ai]="!message.isUser">
+      <div class="message-avatar" *ngIf="!message.isUser">
+        <img src="https://ik.imagekit.io/p51pyfdvv/Design%20sans%20titre%20(5).png?updatedAt=1756125953598" alt="EduHelper Logo" width="16" height="16">
+      </div>
+      <div class="message-content">
+        <p>{{ message.text }}</p>
+        <span class="message-time">{{ message.timestamp | date:'short' }}</span>
+      </div>
+    </div>
+
+    <!-- Typing Indicator -->
+    <div *ngIf="isTyping" class="message ai typing">
+      <div class="message-avatar">
+        <img src="https://ik.imagekit.io/p51pyfdvv/Design%20sans%20titre%20(5).png?updatedAt=1756125953598" alt="EduHelper Logo" width="16" height="16">
+      </div>
+      <div class="message-content">
+        <div class="typing-dots">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Show questions button -->
+  <div *ngIf="!showQuestions && !isTyping && messages.length > 0" class="show-questions-section">
+    <button class="show-questions-btn" (click)="showQuestionsMenu()">
+      Ask Another Question
+    </button>
+  </div>
+
+  <!-- Predefined Questions -->
+  <div class="chat-questions" *ngIf="showQuestions">
+    <p class="questions-title">Choose a question:</p>
+    <div class="questions-grid">
+      <button 
+        *ngFor="let question of predefinedQuestions" 
+        class="question-btn"
+        (click)="selectQuestion(question)"
+      >
+        {{ question.question }}
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Chat Overlay -->
+<div class="chat-overlay" [class.visible]="isOpen" (click)="toggleChat()"></div>
