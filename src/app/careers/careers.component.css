@@ -38,7 +38,7 @@
     padding: 20px 0;
     border-bottom: 1px solid #e5e7eb;
     position: sticky;
-    top: 70px;
+    top: 110px;
     z-index: 100;
 }
 
@@ -598,6 +598,10 @@
     .contact-info {
         flex-direction: column;
         gap: 20px;
+    }
+
+    .career-nav {
+        top: 70px;
     }
 
     .career-menu {
