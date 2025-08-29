@@ -49,11 +49,17 @@ export class CareersComponent {
 
     ];
 
-    currentLifeIndex = 0;
-
-    // Method to switch life content
-    switchLifeContent(index: number) {
-        this.currentLifeIndex = index;
+    // Method to scroll cards horizontally
+    scrollCards(section: string, direction: string) {
+        const container = document.getElementById(`${section}-cards`);
+        if (container) {
+            const scrollAmount = 300;
+            if (direction === 'left') {
+                container.scrollLeft -= scrollAmount;
+            } else {
+                container.scrollLeft += scrollAmount;
+            }
+        }
     }
 
     // Method to handle form submission

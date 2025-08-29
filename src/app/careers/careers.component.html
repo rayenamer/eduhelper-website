@@ -5,28 +5,33 @@
             <h2>What's it like to work at EduHelper?</h2>
         </div>
         
-        <div class="life-content-wrapper">
-            <div class="life-text-section">
-                <h3 class="life-title" id="life-title">{{ lifeContent[currentLifeIndex].title }}</h3>
-                <div class="life-description" id="life-description">
-                    <p>{{ lifeContent[currentLifeIndex].description }}</p>
-                </div>
-                
-                <div class="life-dots">
-                    <div 
-                        class="dot" 
-                        [class.active]="i === currentLifeIndex"
-                        *ngFor="let content of lifeContent; let i = index"
-                        (click)="switchLifeContent(i)"
-                        [attr.data-index]="i">
+        <div class="scrollable-container">
+            <div class="scrollable-cards" id="life-cards">
+                <div class="scroll-card" *ngFor="let content of lifeContent; let i = index">
+                    <div class="card-image">
+                        <img [src]="content.image" [alt]="content.title">
+                    </div>
+                    <div class="card-content">
+                        <h3>{{ content.title }}</h3>
+                        <p>{{ content.description }}</p>
                     </div>
                 </div>
             </div>
-            
-            <div class="life-image-section">
-                <div class="life-main-image">
-                    <img id="main-image" [src]="lifeContent[currentLifeIndex].image" [alt]="lifeContent[currentLifeIndex].title">
-                </div>
+
+            <div class="arrows-container">
+                <button class="scroll-arrow scroll-left" (click)="scrollCards('life', 'left')">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </button>
+
+                <button class="scroll-arrow scroll-right" (click)="scrollCards('life', 'right')">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </button>
             </div>
         </div>
         
