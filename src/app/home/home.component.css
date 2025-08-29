@@ -1,21 +1,4 @@
-* {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Inter', system-ui, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            padding-top: 70px; /* Account for fixed navbar */
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 24px;
-        }
+/* Component-specific styles - global styles handled by shared.css */
 
         /* Hero Section */
         .hero {
@@ -25,6 +8,7 @@
             align-items: center;
             position: relative;
             overflow: hidden;
+            padding-top: 80px;
         }
 
         .hero::before {

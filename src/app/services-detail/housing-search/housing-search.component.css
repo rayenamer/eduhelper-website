@@ -1,1 +1,57 @@
 @import '../shared-service-styles.css';
+
+/* Partnership section styling */
+.partnership-section {
+    background: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 12px;
+    padding: 2rem;
+    margin: 2rem 0;
+    text-align: center;
+}
+
+.partnership-section h3 {
+    color: #c31e33;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.partnership-section p {
+    color: #666;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.partner-btn {
+    background: #c31e33;
+    color: white;
+    text-decoration: none;
+    padding: 1rem 2rem;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.partner-btn:hover {
+    background: #a01729;
+    transform: translateY(-2px);
+    text-decoration: none;
+    color: white;
+    box-shadow: 0 4px 15px rgba(195, 30, 51, 0.3);
+}
+
+@media (max-width: 768px) {
+    .partnership-section {
+        padding: 1.5rem;
+        margin: 1.5rem 0;
+    }
+    
+    .partner-btn {
+        padding: 0.875rem 1.5rem;
+        font-size: 1rem;
+    }
+}

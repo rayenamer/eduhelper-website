@@ -13,6 +13,7 @@ import { ScholarshipGuidanceComponent } from './services-detail/scholarship-guid
 import { InterviewPreparationComponent } from './services-detail/interview-preparation/interview-preparation.component';
 import { OfficialTranslationComponent } from './services-detail/official-translation/official-translation.component';
 import { HotelTicketReservationComponent } from './services-detail/hotel-ticket-reservation/hotel-ticket-reservation.component';
+import { EducationalEventsManagementComponent } from './services-detail/educational-events-management/educational-events-management.component';
 export const routes: Routes = [
     {path: '', component: HomeComponent },
     {path:'community',component:CommunityComponent},
@@ -27,5 +28,6 @@ export const routes: Routes = [
     {path: 'services-detail/interview-preparation', component: InterviewPreparationComponent},
     {path: 'services-detail/official-translation', component: OfficialTranslationComponent},
     {path: 'services-detail/hotel-ticket-reservation', component: HotelTicketReservationComponent},
+    {path: 'services-detail/educational-events-management', component: EducationalEventsManagementComponent},
     {path: '**', component: HomeComponent, pathMatch: 'full' },
 ];

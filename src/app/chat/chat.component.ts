@@ -29,29 +29,24 @@ export class ChatComponent {
   predefinedQuestions: PredefinedQuestion[] = [
     {
       id: 'university-application',
-      question: 'How can you help me with university applications?',
-      answer: 'We provide comprehensive support for university applications including document preparation, application submission, and guidance throughout the entire process. Our team has helped over 500 students successfully apply to top international universities.'
+      question: 'How can I go study abroad without compte bloqué?',
+      answer: 'there are destinations like Dubai, Turkey, and Malta that don’t require a compte bloqué. We can guide you and help you apply to universities in these countries.'
     },
     {
       id: 'visa-process',
-      question: 'What is the visa application process?',
-      answer: 'Our visa procedure service includes document verification, application form completion, interview preparation, and follow-up with embassies. We have a 95% success rate and handle all visa types for students.'
+      question: 'How much should I have to study abroad?',
+      answer: 'It depends on the destination, but you should plan for at least 25,000 TND for the first year to cover tuition, housing, and living expenses.'
     },
     {
       id: 'scholarships',
-      question: 'Do you help with scholarship applications?',
-      answer: 'Yes! We provide scholarship guidance including identifying suitable opportunities, application assistance, and essay writing support. We have helped students secure over $2M in scholarships across various programs.'
+      question: ' Is the visa guaranteed?',
+      answer: 'No agency or university can guarantee a visa. Visa decisions are made only by the consulate authorities. We prepare and guide you, but the final decision rests with them.'
     },
     {
       id: 'housing',
-      question: 'Can you help me find accommodation abroad?',
-      answer: 'Absolutely! Our housing search service includes finding suitable accommodation, lease negotiations, and ensuring safe, comfortable living arrangements near your university. We work with trusted partners worldwide.'
+      question: 'How do you help students?',
+      answer: 'We support students in every step: 1) Choosing the right university and program 2) Preparing applications 3) Assisting with visa procedures 4) Helping with housing and settling abroad'
     },
-    {
-      id: 'costs',
-      question: 'What are your service fees?',
-      answer: 'Our fees vary depending on the services you need. We offer flexible packages and payment plans. Contact us for a personalized quote based on your specific requirements. Initial consultation is always free!'
-    }
   ];
 
   toggleChat() {

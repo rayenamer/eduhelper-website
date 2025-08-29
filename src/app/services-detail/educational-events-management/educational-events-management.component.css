@@ -1,0 +1,74 @@
+@import '../shared-service-styles.css';
+
+/* Additional styles specific to educational events management */
+.event-highlight {
+    background: linear-gradient(135deg, #c31e33, #e53e3e);
+    color: white;
+    padding: 2rem;
+    border-radius: 12px;
+    margin: 2rem 0;
+    box-shadow: 0 8px 25px rgba(195, 30, 51, 0.3);
+}
+
+.event-highlight h2 {
+    color: white;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+.opportunities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.opportunity-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-left: 4px solid #c31e33;
+}
+
+.opportunity-card h4 {
+    color: #c31e33;
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.gallery-section {
+    background: #f9fafb;
+    padding: 2rem;
+    border-radius: 8px;
+    margin: 2rem 0;
+    text-align: center;
+}
+
+.media-coverage {
+    background: linear-gradient(135deg, #1f2937, #374151);
+    color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    margin: 2rem 0;
+    text-align: center;
+}
+
+.media-coverage h3 {
+    color: white;
+    margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+    .opportunities-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .event-highlight {
+        padding: 1.5rem;
+    }
+    
+    .event-highlight h2 {
+        font-size: 1.5rem;
+    }
+}

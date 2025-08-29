@@ -151,6 +151,10 @@
 
 /* Mobile responsive */
 @media (max-width: 768px) {
+  .nav-container {
+    height: 70px; /* Reduced height for mobile */
+  }
+
   .nav-menu {
     position: fixed;
     left: -100%;
